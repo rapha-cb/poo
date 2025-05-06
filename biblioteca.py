@@ -1,0 +1,66 @@
+class Pessoa():
+    def __init__(self, peso, nome, idade):
+        self.nome = nome
+        self.idade = idade
+        self.peso = peso
+        self.comendo = False
+        self.falando = False
+        self.dormindo = False
+
+    def comer(self, comida):
+        self.comida = comida
+        if self.comendo == True:
+            print(f"{self.nome} já está comendo" )
+        elif self.falando == True:
+            print(f"{self.nome} não pode comer pois já está falando")
+        elif self.dormindo == True:
+            print(f"{self.nome} não pode comer pois está está dormindo ")
+        else:
+            print(f"como {self.nome} não está fazendo nada, ele começou a comer {self.comida}")
+            self.comendo = True
+
+
+    def falar(self):
+        if self.falando == True:
+            print(f"{self.nome} já está falando")
+        elif self.comendo == True:
+            print(f"{self.nome} não pode falar pois está comendo")
+        elif self.dormindo == True:
+            print(f"{self.nome} não pode falar pois está dormindo ")
+        else:
+            print(f"como {self.nome} não está fazendo nada, ele começou a falar")
+            self.falando = True
+
+
+    def dormir(self):
+        if self.dormir == True:
+            print(f"{self.nome} já está dormindo")
+        elif self.comendo == True:
+            print(f"{self.nome} não pode dormir pois está comendo")
+        elif self.falando == True:
+            print(f"{self.nome} não pode dormir pois está falando ")
+        else:
+            print(f"como {self.nome} não está fazendo nada, ele começou a dormir")
+            self.dormindo = True
+    def pararDeComer(self):
+        if self.comendo == True:
+            print(f"{self.nome} parou de FINALMENTE comer")
+            self.comendo = False
+        else:
+            print(f"{self.nome} não está comendo ")
+
+    def pararDefalar(self):
+        if self.falando == True:
+            print(f"{self.nome} calou a boca, AMÉM!")
+            self.falando = False
+        else:
+            print(f"{self.nome} não está falando")
+    def acordar(self):
+        if self.dormindo == True:
+            print(f"{self.nome} a bela adormecida acordou! ")
+            self.dormindo = False
+        else:
+            print(f"{self.nome} está acordado")
+
+
+
