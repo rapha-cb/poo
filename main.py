@@ -1,16 +1,12 @@
 from biblioteca import *
 
-aluno01 = Pessoa(56,"Raphael", 21, )
-aluno02 = Pessoa(60, "Bete", 13)
 
-aluno01.comer("pizza")
-aluno01.comer("pizza")
-aluno01.falar()
-aluno01.dormir()
-aluno01.pararDeComer()
-aluno01.pararDeComer()
-aluno01.falar()
+conta01 = ContaBancaria("raphael", 9974, "corrente")
+conta01.ativarConta()
+conta01.depositar(1000)
+conta01.ajustaLimite(1000)
 
-#checkpoint
-
-
+conta01.sacar(1500)
+conta01.verificarSaldo()
+conta01.depositar(200)
+conta01.verificarSaldo()
