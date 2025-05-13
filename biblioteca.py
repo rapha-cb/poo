@@ -100,4 +100,75 @@ class ContaBancaria():
         self.limite += limite
         print(f"limite de {self.limite} ajustado com sucesso!")
 
+class Animal():
+    def __init__(self,nome,cor,comida):
+        self.nome = nome
+        self.cor = cor
+        self.comida = comida
 
+
+    def comer(self):
+        print(f"{self.nome} foi comer ")
+
+
+class Gato(Animal):
+    def __init__(self,nome, cor ,comida):
+        super().__init__(nome,cor,comida)
+    def Miar(self):
+        print(f"{self.nome} foi miando pedindo carinho")
+
+class Vaca(Animal):
+    def __init__(self, nome, cor,comida):
+        super().__init__(nome,cor,comida)
+    def Mugir(self):
+        print(f"A {self.nome} mugiu ")
+    def comer(self):
+        print(f"A {self.nome} foi comer {self.comida}")
+
+class Cachorro(Animal):
+    def __init__(self,nome,cor,comida):
+        super().__init__(nome,cor,comida)
+    def Latir(self):
+        print(f"O {self.nome} está latindo muito!")
+class Coelho(Animal):
+    def __init__(self,nome, cor,comida):
+        super().__init__(nome,cor,comida)
+    def Pular(self):
+        print(f"o {self.nome} está pulando por toda a parte")
+
+
+class Ingresso():
+    def __init__(self, valor):
+        self.valor = valor
+    def imprimeValor(self):
+        print(f"o valor do ingresso é: R${self.valor:.2f} reais ")
+class Vip(Ingresso):
+    def __init__(self,valor):
+        super().__init__(valor)
+    def imprimeValor(self):
+        print(f"o valor do ingresso vip é R${self.valor+(self.valor/2):.2f} reais")
+
+class Forma():
+    def __init__(self):
+        self.area= 0
+        self.perimetro = 0
+class Retangulo(Forma):
+    def __init__(self):
+        super().__init__()
+    def calculaArea(self,base, altura):
+        self.area = base * altura
+        print(f"a área do retangulo é: {self.area} cm")
+    def calculaPerimetro(self, base, altura):
+        self.perimetro= (altura*2)+ (base*2)
+        print(f"o perímetro do retangulo é: {self.perimetro} cm")
+class Triangulo(Forma):
+    def __init__(self):
+        super().__init__()
+
+    def calculaArea(self,base, altura):
+        self.area = (base * altura)/2
+        print(f"a área do triangulo é: {self.area} cm")
+
+    def calculaPerimetro(self, base):
+        self.perimetro= base*3
+        print(f"o perímetro do triangulo é: {self.perimetro} cm")
